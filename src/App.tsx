@@ -1,9 +1,7 @@
-import * as React from 'react';
-
 function App() {
   return (
     <div>
-      <h1 className='text-2xl'>Hello World</h1>
+      <h1 className='text-2xl font-sans'>Hello World</h1>
     </div>
   );
 }
