@@ -1,3 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.indent {
+  text-indent: 1rem;
+}
+
+.mask-image {
+  clip-path: url(#clip);
+  object-fit: cover;
+}
