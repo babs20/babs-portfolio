@@ -1,20 +1,20 @@
 export default function TopNav() {
   return (
-    <nav className='w-full h-20 text-white font-roboto p-4 flex items-center justify-center z-10 relative'>
-      <h1 className='absolute left-20 font-bold italic text-2xl'>
+    <nav className='flex items-center justify-center w-full h-20 p-4 text-white  font-roboto'>
+      <h1 className='absolute text-2xl italic font-bold left-20'>
         brady blair
       </h1>
       <div>
-        <a href='/' className='mx-4 my-1 pb-2 hover:border-b border-white'>
+        <a href='/' className='pb-2 mx-4 my-1 border-white hover:border-b'>
           About Me
         </a>
-        <a href='/' className='mx-4 my-1 pb-2 hover:border-b border-white'>
+        <a href='/' className='pb-2 mx-4 my-1 border-white hover:border-b'>
           Projects
         </a>
-        <a href='/' className='mx-4 my-1 pb-2 hover:border-b border-white'>
+        <a href='/' className='pb-2 mx-4 my-1 border-white hover:border-b'>
           Goals
         </a>
-        <a href='/' className='mx-4 my-1 pb-2 hover:border-b border-white'>
+        <a href='/' className='pb-2 mx-4 my-1 border-white hover:border-b'>
           Contact
         </a>
       </div>
