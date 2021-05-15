@@ -1,6 +1,6 @@
 export default function TopNav() {
   return (
-    <nav className='w-full h-20  text-white font-roboto p-4 flex items-center justify-center'>
+    <nav className='w-full h-20 text-white font-roboto p-4 flex items-center justify-center z-10 relative'>
       <h1 className='absolute left-20 font-bold italic text-2xl'>
         brady blair
       </h1>

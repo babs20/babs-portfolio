@@ -1,9 +1,7 @@
+import Home from './views/Home';
+
 function App() {
-  return (
-    <div>
-      <h1 className='text-2xl font-sans'>Hello World</h1>
-    </div>
-  );
+  return <Home></Home>;
 }
 
 export default App;
