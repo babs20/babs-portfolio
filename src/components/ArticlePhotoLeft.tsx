@@ -1,4 +1,10 @@
+import CSS from 'csstype';
 export default function Article(): JSX.Element {
+  const shadow: CSS.Properties = {
+    boxShadow: '0px 4px 16px rgba(0, 0, 0, 0.25)',
+    borderRadius: '24px',
+  };
+
   return (
     <article className='flex items-center justify-center'>
       <div className='mr-32'>
@@ -40,8 +46,13 @@ export default function Article(): JSX.Element {
         </svg>
       </div>
       <div className='w-[40rem]'>
-        <h2 className='mb-3 text-4xl font-bold text-white'>About Me</h2>
-        <div className='text-[#6B7385] bg-white p-8 rounded-3xl shadow-lg text-sm leading-6'>
+        <h2 className='mb-3 text-4xl font-bold text-[#6B7385] ml-4'>
+          About Me
+        </h2>
+        <div
+          className='text-[#6B7385] bg-white p-8 rounded-3xl leading-6'
+          style={shadow}
+        >
           <p className='mb-6 indent'>
             Hard-working and committed to making things work. No matter the
             challenge, I have a passion to break it down to its roots and solve

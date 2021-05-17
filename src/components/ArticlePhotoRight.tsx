@@ -3,7 +3,7 @@ export default function Article(): JSX.Element {
     <article className='flex items-center justify-center'>
       <div className='w-[40rem]'>
         <h2 className='mb-3 text-4xl font-bold text-[#6B7385]'>Hobbies</h2>
-        <div className='p-8 text-sm leading-6 text-white bg-[#6B7385] shadow-lg rounded-3xl'>
+        <div className='p-8 leading-6 text-white bg-[#6B7385] shadow-lg rounded-3xl'>
           <p className='mb-6 indent'>
             Hard-working and committed to making things work. No matter the
             challenge, I have a passion to break it down to its roots and solve
