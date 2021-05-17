@@ -3,8 +3,8 @@ export default function Article(): JSX.Element {
     <article className='flex items-center justify-center'>
       <div className='w-[40rem]'>
         <h2 className='mb-3 text-4xl font-bold text-[#6B7385]'>Hobbies</h2>
-        <div className='p-8 leading-6 text-white bg-[#6B7385] shadow-lg rounded-3xl'>
-          <p className='mb-6 indent'>
+        <div className='p-8 leading-6 text-white bg-[#6B7385] shadow-lg rounded-3xl prose'>
+          <p className='indent'>
             Hard-working and committed to making things work. No matter the
             challenge, I have a passion to break it down to its roots and solve
             it head-on. I have been involved in live broadcast environments
@@ -12,14 +12,14 @@ export default function Article(): JSX.Element {
             love to use technology to create an immersive and engaging
             environment.
           </p>
-          <p className='mb-6 indent'>
+          <p className='indent'>
             From 2018-2020, I was involved in a startup for LED Displays and
             became the Lead Engineer and Technician for programming and solving
             any technical issues related to the displays. I had my hand in
             almost every aspect of the company and lead the technology directory
             for the future.
           </p>
-          <p className='mb-6 indent'>
+          <p className='indent'>
             As the company grew and became larger, I found myself invested in
             solving our planning and storage solutions by taking advantage of
             basic programming patterns. This initial interest grew into a
