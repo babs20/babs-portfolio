@@ -1,4 +1,5 @@
 import TopNav from '../components/TopNav';
+import Footer from '../components/Footer';
 import ArticlePhotoLeft from '../components/ArticlePhotoLeft';
 import ArticlePhotoRight from '../components/ArticlePhotoRight';
 
@@ -23,6 +24,7 @@ export default function Home(): JSX.Element {
         <ArticlePhotoLeft />
         <ArticlePhotoRight />
       </section>
+      <Footer></Footer>
     </main>
   );
 }
