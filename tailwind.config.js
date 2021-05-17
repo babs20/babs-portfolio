@@ -28,10 +28,16 @@ module.exports = {
       boxShadow: {
         full: '0px 4px 16px rgba(0, 0, 0, 0.25)',
       },
+      colors: {
+        primary: '#6B7385',
+      },
     },
   },
   variants: {
     extend: {},
   },
-  plugins: [require('@tailwindcss/typography')],
+  plugins: [
+    require('@tailwindcss/typography'),
+    require('@tailwindcss/aspect-ratio'),
+  ],
 };
