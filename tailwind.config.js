@@ -25,10 +25,13 @@ module.exports = {
       zIndex: {
         '-10': -10,
       },
+      boxShadow: {
+        full: '0px 4px 16px rgba(0, 0, 0, 0.25)',
+      },
     },
   },
   variants: {
     extend: {},
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/typography')],
 };
