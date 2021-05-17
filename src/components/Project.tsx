@@ -1,16 +1,26 @@
-export default function Project(): JSX.Element {
+interface Props {
+  projectName: string;
+  projectType: string;
+  role: string;
+  description: string;
+  image: string;
+}
+
+export const Project = ({
+  projectName,
+  projectType,
+  description,
+  role,
+  image,
+}: Props): JSX.Element => {
   return (
     <article className='flex items-start justify-center py-16 space-x-8 text-primary'>
       {/* TODO: Change to Photo */}
-      <img
-        src='/img/journey-square.jpg'
-        alt=''
-        className='object-cover rounded-xl h-[175px]'
-      />
+      <img src={image} alt='' className='object-cover rounded-xl h-[175px]' />
       <div>
         {/* Project Name and Tech Stack */}
         <div className='flex items-center mb-2 space-x-4'>
-          <h1 className='text-4xl font-bold'>Journey</h1>
+          <h1 className='text-4xl font-bold'>{projectName}</h1>
           <svg
             xmlns='http://www.w3.org/2000/svg'
             viewBox='0 0 32 32'
@@ -106,16 +116,14 @@ export default function Project(): JSX.Element {
         </div>
         {/* Project Type and Role */}
         <div className='mb-2 space-x-4'>
-          <span>Team Project</span>
-          <span>Front End and UI / UX Design</span>
+          <span>{projectType}</span>
+          <span>{role}</span>
           {/* Description */}
         </div>
-        <p className='prose'>
-          Journey is a group travel planning app that allows users to plan
-          itineraries in real time with members of their group. Users can also
-          browse and search other members' public itineraries for inspiration.
-        </p>
+        <p className='prose text-primary'>{description}</p>
       </div>
     </article>
   );
-}
+};
+
+export default Project;
