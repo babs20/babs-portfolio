@@ -33,12 +33,6 @@ export default function TopNav(): JSX.Element {
           Projects
         </Link>
         <Link
-          to='/goals'
-          className='pb-2 mx-4 my-1 border-[#6B7385] hover:border-b'
-        >
-          Goals
-        </Link>
-        <Link
           to='/contact'
           className='pb-2 mx-4 my-1 border-[#6B7385] hover:border-b'
         >

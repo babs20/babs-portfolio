@@ -1,5 +1,6 @@
 import Home from './views/Home';
 import Projects from './views/Projects';
+import Contact from './views/Contact';
 import { FooterAndHeader } from './containers/FooterAndHeader';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
@@ -12,11 +13,10 @@ function App() {
             <Projects />
           </FooterAndHeader>
         </Route>
-        <Route path='/goals'>
-          <Home />
-        </Route>
         <Route path='/contact'>
-          <Home></Home>
+          <FooterAndHeader>
+            <Contact />
+          </FooterAndHeader>
         </Route>
         <Route path='/'>
           <FooterAndHeader>
