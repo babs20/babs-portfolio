@@ -239,6 +239,7 @@ export const ContactForm = (): JSX.Element => {
           )}
           onChange={e => handleInputChange(e)}
           onFocus={e => clearErrorMessage(e)}
+          value={formState.message}
         />
         <span
           className={classNames(errorState.message ? 'text-error' : 'hidden')}
