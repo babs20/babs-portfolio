@@ -30,6 +30,7 @@ module.exports = {
       },
       colors: {
         primary: '#6B7385',
+        error: '#BF190B',
       },
     },
   },
