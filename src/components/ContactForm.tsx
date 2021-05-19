@@ -160,6 +160,7 @@ export const ContactForm = (): JSX.Element => {
     <form
       className='flex flex-col items-start p-8 space-y-6 text-primary w-[480px]'
       onSubmit={e => submitForm(e)}
+      id='contact-form'
     >
       <h1 className='w-full text-3xl font-black'>Contact</h1>
       <div className='flex flex-col w-full'>
@@ -247,7 +248,11 @@ export const ContactForm = (): JSX.Element => {
           Please enter a message.
         </span>
       </InputContainer>
-      <button className='p-3 font-bold text-white transition duration-300 rounded-lg bg-primary hover:shadow-full'>
+      <button
+        type='submit'
+        form='contact-form'
+        className='p-3 font-bold text-white transition duration-300 rounded-lg bg-primary hover:shadow-full'
+      >
         SEND MESSAGE
       </button>
     </form>
