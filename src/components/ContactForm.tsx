@@ -247,7 +247,7 @@ export const ContactForm = (): JSX.Element => {
           Please enter a message.
         </span>
       </InputContainer>
-      <button className='p-3 font-bold text-white rounded-lg bg-primary'>
+      <button className='p-3 font-bold text-white transition duration-300 rounded-lg bg-primary hover:shadow-full'>
         SEND MESSAGE
       </button>
     </form>
