@@ -1,19 +1,34 @@
-import { ReactNode, useState } from 'react';
+import React, { ReactNode, useState } from 'react';
 import emailjs from 'emailjs-com';
+import classNames from 'classnames';
 
-type FormState = {
+type FormStateType = {
   name: string;
   email: string;
   subject: string;
   message: string;
 };
 
+type ErrorStateType = {
+  name: boolean;
+  email: boolean;
+  subject: boolean;
+  message: boolean;
+};
+
 type ContactInputProps = {
   type: string;
   name: string;
   placeholder: string;
-  state: FormState;
-  setState: React.Dispatch<React.SetStateAction<FormState>>;
+  formState: FormStateType;
+  errorState: ErrorStateType;
+  errorMessage: string;
+  clearErrorMessage: (
+    e: React.FormEvent<HTMLInputElement> | React.FormEvent<HTMLTextAreaElement>
+  ) => void;
+  handleInputChange: (
+    e: React.FormEvent<HTMLInputElement> | React.FormEvent<HTMLTextAreaElement>
+  ) => void;
 };
 
 const InputContainer = ({ children }: { children: ReactNode }): JSX.Element => (
@@ -24,31 +39,50 @@ export const ContactInput = ({
   type,
   name,
   placeholder,
-  state,
-  setState,
+  formState,
+  errorState,
+  errorMessage,
+  clearErrorMessage,
+  handleInputChange,
 }: ContactInputProps): JSX.Element => {
-  const handleInputChange = (e: React.FormEvent<HTMLInputElement>): void => {
-    setState({ ...state, [e.currentTarget.name]: e.currentTarget.value });
-  };
-
   return (
-    <input
-      type={type}
-      name={name}
-      placeholder={placeholder}
-      className='p-3 border rounded-lg border-primary focus:outline-none focus:ring-1 ring-primary'
-      onChange={e => handleInputChange(e)}
-      value={state[name as keyof FormState]}
-    />
+    <>
+      <input
+        type={type}
+        name={name}
+        placeholder={placeholder}
+        className={classNames(
+          'p-3 border rounded-lg border-primary focus:outline-none focus:ring-1 ring-primary',
+          { 'border-error': errorState[name as keyof ErrorStateType] }
+        )}
+        onChange={e => handleInputChange(e)}
+        value={formState[name as keyof FormStateType]}
+        onFocus={clearErrorMessage}
+      />
+      <span
+        className={classNames(
+          errorState[name as keyof ErrorStateType] ? 'text-error' : 'hidden'
+        )}
+      >
+        {errorMessage}
+      </span>
+    </>
   );
 };
 
 export const ContactForm = (): JSX.Element => {
-  const [state, setState] = useState<FormState>({
+  const [formState, setFormState] = useState<FormStateType>({
     name: '',
     email: '',
     subject: '',
     message: '',
+  });
+
+  const [errorState, setErrorState] = useState<ErrorStateType>({
+    name: false,
+    email: false,
+    subject: false,
+    message: false,
   });
 
   const sendEmail = (): void => {
@@ -57,10 +91,10 @@ export const ContactForm = (): JSX.Element => {
         'service_b6cdl9w',
         'portfolio_site',
         {
-          subject: state.subject,
-          from_name: state.name,
-          from_email: state.email,
-          message: state.message,
+          subject: formState.subject,
+          from_name: formState.name,
+          from_email: formState.email,
+          message: formState.message,
         },
         'user_t1rYZ5aMx35opccJ5gGJG'
       )
@@ -74,10 +108,52 @@ export const ContactForm = (): JSX.Element => {
       );
   };
 
+  const validateForm = (): boolean => {
+    let isError: boolean = false;
+    const newErrors: ErrorStateType = {
+      ...errorState,
+    };
+    for (const inputName in formState) {
+      if (formState[inputName as keyof FormStateType] === '') {
+        isError = true;
+        newErrors[inputName as keyof FormStateType] = true;
+      }
+    }
+    setErrorState(newErrors);
+    return isError;
+  };
+
   const submitForm = (e: React.FormEvent<HTMLFormElement>): void => {
     e.preventDefault();
 
+    if (validateForm()) return;
+
     sendEmail();
+
+    setFormState({
+      name: '',
+      email: '',
+      subject: '',
+      message: '',
+    });
+  };
+
+  const handleInputChange = (
+    e: React.FormEvent<HTMLInputElement> | React.FormEvent<HTMLTextAreaElement>
+  ): void => {
+    setFormState({
+      ...formState,
+      [e.currentTarget.name]: e.currentTarget.value,
+    });
+  };
+
+  const clearErrorMessage = (
+    e: React.FormEvent<HTMLInputElement> | React.FormEvent<HTMLTextAreaElement>
+  ): void => {
+    setErrorState({
+      ...errorState,
+      [e.currentTarget.name]: false,
+    });
   };
 
   return (
@@ -87,57 +163,88 @@ export const ContactForm = (): JSX.Element => {
     >
       <h1 className='w-full text-3xl font-black'>Contact</h1>
       <div className='flex flex-col w-full'>
-        <label htmlFor='name' className='font-bold'>
+        <label
+          htmlFor='name'
+          className={classNames('font-bold', { 'text-error': errorState.name })}
+        >
           Name
         </label>
         <ContactInput
           type={'text'}
           name={'name'}
           placeholder={'Name'}
-          setState={setState}
-          state={state}
+          handleInputChange={handleInputChange}
+          formState={formState}
+          errorState={errorState}
+          errorMessage={'Please enter your name.'}
+          clearErrorMessage={clearErrorMessage}
         />
       </div>
       <InputContainer>
-        <label htmlFor='email' className='font-bold'>
+        <label
+          htmlFor='email'
+          className={classNames('font-bold', {
+            'text-error': errorState.email,
+          })}
+        >
           Email
         </label>
         <ContactInput
           type={'email'}
           name={'email'}
           placeholder={'Email'}
-          setState={setState}
-          state={state}
+          handleInputChange={handleInputChange}
+          formState={formState}
+          errorState={errorState}
+          errorMessage={'Please enter an email.'}
+          clearErrorMessage={clearErrorMessage}
         />
       </InputContainer>
       <InputContainer>
-        <label htmlFor='subject' className='font-bold'>
+        <label
+          htmlFor='subject'
+          className={classNames('font-bold', {
+            'text-error': errorState.subject,
+          })}
+        >
           Subject
         </label>
         <ContactInput
           type={'text'}
           name={'subject'}
           placeholder={'Subject'}
-          setState={setState}
-          state={state}
+          handleInputChange={handleInputChange}
+          formState={formState}
+          errorState={errorState}
+          errorMessage={'Please enter a subject.'}
+          clearErrorMessage={clearErrorMessage}
         />
       </InputContainer>
       <InputContainer>
-        <label htmlFor='message' className='font-bold'>
+        <label
+          htmlFor='message'
+          className={classNames('font-bold', {
+            'text-error': errorState.message,
+          })}
+        >
           Message
         </label>
         <textarea
           name='message'
           placeholder='Message'
           rows={3}
-          className='p-3 border rounded-lg resize-none border-primary focus:outline-none focus:ring-1 ring-primary'
-          onChange={e =>
-            setState({
-              ...state,
-              [e.currentTarget.name]: e.currentTarget.value,
-            })
-          }
+          className={classNames(
+            'p-3 border rounded-lg border-primary focus:outline-none focus:ring-1 ring-primary',
+            { 'border-error': errorState.message }
+          )}
+          onChange={e => handleInputChange(e)}
+          onFocus={e => clearErrorMessage(e)}
         />
+        <span
+          className={classNames(errorState.message ? 'text-error' : 'hidden')}
+        >
+          Please enter a message.
+        </span>
       </InputContainer>
       <button className='p-3 font-bold text-white rounded-lg bg-primary'>
         SEND MESSAGE
