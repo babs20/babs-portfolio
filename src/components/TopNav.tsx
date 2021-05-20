@@ -13,7 +13,7 @@ export default function TopNav(): JSX.Element {
         { 'h-72 ease-in': isOpen === 'open' }
       )}
     >
-      <div className='container flex items-center justify-between'>
+      <div className='flex items-center justify-between w-full sm:justify-around'>
         <Link to='/'>
           <svg
             width='40'
