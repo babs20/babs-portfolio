@@ -10,3 +10,7 @@
   clip-path: url(#clip);
   object-fit: cover;
 }
+
+.animation-delay {
+  animation-delay: calc(var(--order) * 100ms);
+}

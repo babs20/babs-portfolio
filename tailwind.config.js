@@ -32,6 +32,37 @@ module.exports = {
         primary: '#6B7385',
         error: '#BF190B',
       },
+      animation: {
+        'fall-down': 'fall 800ms forwards',
+        'fold-up': 'up 600ms forwards',
+      },
+      keyframes: {
+        fall: {
+          '0%': {
+            opacity: '0',
+            transform: 'translateY(-20%)',
+          },
+          '100%': {
+            opacity: '1',
+            transform: 'translateY(0%)',
+          },
+        },
+        up: {
+          '0%': {
+            opacity: '1',
+            transform: 'translateY(0%)',
+            visibility: 'inherit',
+          },
+          '100%': {
+            opacity: '0',
+            transform: 'translateY(-20%)',
+            visibility: 'invisible',
+          },
+        },
+      },
+      transitionProperty: {
+        height: 'height',
+      },
     },
   },
   variants: {
