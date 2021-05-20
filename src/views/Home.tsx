@@ -3,7 +3,7 @@ import ArticlePhotoRight from '../components/ArticlePhotoRight';
 
 export default function Home(): JSX.Element {
   return (
-    <section className='py-16'>
+    <section className='min-h-full py-16'>
       <ArticlePhotoLeft />
       <ArticlePhotoRight />
     </section>

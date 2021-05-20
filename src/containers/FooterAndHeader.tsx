@@ -8,7 +8,7 @@ type Props = {
 
 export const FooterAndHeader = ({ children }: Props): JSX.Element => {
   return (
-    <div className='flex flex-col h-full'>
+    <div className='flex flex-col h-screen'>
       <TopNav />
       <main className='h-full'>{children}</main>
       <Footer />
