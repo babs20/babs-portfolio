@@ -8,10 +8,10 @@ type Props = {
 
 export const FooterAndHeader = ({ children }: Props): JSX.Element => {
   return (
-    <main className='min-h-screen'>
+    <div className='flex flex-col h-full'>
       <TopNav />
-      {children}
+      <main className='h-full'>{children}</main>
       <Footer />
-    </main>
+    </div>
   );
 };
