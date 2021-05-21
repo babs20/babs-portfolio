@@ -33,8 +33,8 @@ module.exports = {
         error: '#BF190B',
       },
       animation: {
-        'fall-down': 'fall 800ms forwards',
-        'fold-up': 'up 600ms forwards',
+        'fall-down': 'fall 400ms forwards',
+        'fold-up': 'up 300ms forwards',
       },
       keyframes: {
         fall: {

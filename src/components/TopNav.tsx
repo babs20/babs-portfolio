@@ -8,7 +8,7 @@ export default function TopNav(): JSX.Element {
   return (
     <nav
       className={classNames(
-        'flex flex-col items-center w-full sm:h-20 py-4 px-8 text-[#6B7385] transition-height duration-700',
+        'flex flex-col items-center w-full sm:h-20 py-4 px-8 text-[#6B7385] transition-height duration-500',
         { 'h-20 ease-in': isOpen !== 'open' },
         { 'h-72 ease-in': isOpen === 'open' }
       )}
@@ -55,11 +55,7 @@ export default function TopNav(): JSX.Element {
             className='w-10 h-10'
             viewBox='0 0 20 20'
             fill='currentColor'
-            onClick={() =>
-              setIsOpen(
-                isOpen === 'initial' || isOpen === 'closed' ? 'open' : 'closed'
-              )
-            }
+            onClick={() => setIsOpen(isOpen === 'open' ? 'closed' : 'open')}
           >
             <path
               fillRule='evenodd'
