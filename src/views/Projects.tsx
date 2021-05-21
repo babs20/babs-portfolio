@@ -19,6 +19,7 @@ export default function Projects(): JSX.Element {
               "Journey is a group travel planning app that allows users to plan itineraries in real time with members of their group. Users can also browse and search other members' public itineraries for inspiration."
             }
             image={'./img/journey-square.jpg'}
+            repo={'journey'}
           />
           <Project
             projectName={'Scheduler'}
@@ -28,6 +29,7 @@ export default function Projects(): JSX.Element {
               'Scheduler is a SPA (Single-Page Application) used to schedule up-to-date, and organized appointments for organizations. Using real-time updating via a Websocket connection you are able to see what your colleagues are doing in real-time!'
             }
             image={'./img/scheduler-square.jpg'}
+            repo={'scheduler'}
           />
           <Project
             projectName={'Jungle'}
@@ -37,6 +39,7 @@ export default function Projects(): JSX.Element {
               "Jungle is a ecommerce website built with Ruby on Rails. It has an admin panel and ability for user's to leave reviews on products."
             }
             image={'./img/jungle-square.jpg'}
+            repo={'jungle-rails'}
           />
         </div>
       </div>

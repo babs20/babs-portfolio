@@ -4,6 +4,7 @@ interface Props {
   role: string;
   description: string;
   image: string;
+  repo: string;
 }
 
 export const Project = ({
@@ -12,19 +13,28 @@ export const Project = ({
   description,
   role,
   image,
+  repo,
 }: Props): JSX.Element => {
   return (
     <article className='flex flex-col items-start justify-center py-8 sm:space-x-8 sm:flex-row text-primary'>
       {/* TODO: Change to Photo */}
       <img
         src={image}
-        alt=''
+        alt={`A preview of ${projectName}.`}
         className='object-cover rounded-xl h-48 sm:h-[175px] w-full sm:w-[175px] mb-4'
       />
       <div>
         {/* Project Name and Tech Stack */}
         <div className='flex flex-col items-start mb-2 xs:flex-row xs:space-x-4 sm:items-center'>
-          <h1 className='text-3xl font-bold'>{projectName}</h1>
+          <a
+            href={`https://github.com/babs20/${repo}`}
+            target='_blank'
+            rel='noreferrer'
+          >
+            <h1 className='text-3xl font-bold hover:underline'>
+              {projectName}
+            </h1>
+          </a>
           <div className='flex space-x-4'>
             <svg
               xmlns='http://www.w3.org/2000/svg'
