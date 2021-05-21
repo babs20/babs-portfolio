@@ -2,8 +2,8 @@ import Project from '../components/Project';
 
 export default function Projects(): JSX.Element {
   return (
-    <section className='flex flex-col items-center px-16'>
-      <div className='mt-16'>
+    <section className='flex flex-col items-center px-8 sm:px-16'>
+      <div className='mt-8'>
         <div className='-mb-8'>
           <h1 className='text-4xl font-black text-primary'>Projects</h1>
           <span className='font-light text-primary'>
