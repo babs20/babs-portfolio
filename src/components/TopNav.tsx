@@ -8,9 +8,9 @@ export default function TopNav(): JSX.Element {
   return (
     <nav
       className={classNames(
-        'flex flex-col items-center w-full sm:h-20 py-4 px-8 text-[#6B7385] transition-height duration-500',
+        'flex flex-col items-center w-full sm:h-20 py-4 px-8 text-[#6B7385] transition-height duration-500 mb-8',
         { 'h-20 ease-in': isOpen !== 'open' },
-        { 'h-72 ease-in': isOpen === 'open' }
+        { 'h-48 ease-in': isOpen === 'open' }
       )}
     >
       <div className='flex items-center justify-between w-full sm:justify-around'>

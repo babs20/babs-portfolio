@@ -14,7 +14,7 @@ export const Project = ({
   image,
 }: Props): JSX.Element => {
   return (
-    <article className='flex flex-col items-start justify-center py-16 sm:space-x-8 sm:flex-row text-primary'>
+    <article className='flex flex-col items-start justify-center py-8 sm:space-x-8 sm:flex-row text-primary'>
       {/* TODO: Change to Photo */}
       <img
         src={image}
@@ -24,7 +24,7 @@ export const Project = ({
       <div>
         {/* Project Name and Tech Stack */}
         <div className='flex flex-col items-start mb-2 xs:flex-row xs:space-x-4 sm:items-center'>
-          <h1 className='text-4xl font-bold'>{projectName}</h1>
+          <h1 className='text-3xl font-bold'>{projectName}</h1>
           <div className='flex space-x-4'>
             <svg
               xmlns='http://www.w3.org/2000/svg'

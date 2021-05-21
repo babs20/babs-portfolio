@@ -158,7 +158,7 @@ export const ContactForm = (): JSX.Element => {
 
   return (
     <form
-      className='flex flex-col items-start p-8 space-y-6 text-primary w-[480px]'
+      className='flex flex-col items-start px-8 pb-8 space-y-6 text-primary w-[480px]'
       onSubmit={e => submitForm(e)}
       id='contact-form'
     >
