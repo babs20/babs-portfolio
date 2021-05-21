@@ -1,4 +1,4 @@
-import Home from './views/Home';
+import About from './views/About';
 import Projects from './views/Projects';
 import Contact from './views/Contact';
 import { FooterAndHeader } from './containers/FooterAndHeader';
@@ -18,9 +18,14 @@ function App() {
             <Contact />
           </FooterAndHeader>
         </Route>
+        <Route path='/about'>
+          <FooterAndHeader>
+            <About />
+          </FooterAndHeader>
+        </Route>
         <Route path='/'>
           <FooterAndHeader>
-            <Home />
+            <About />
           </FooterAndHeader>
         </Route>
       </Switch>
