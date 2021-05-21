@@ -1,6 +1,6 @@
 export default function Footer(): JSX.Element {
   return (
-    <footer className='flex flex-col items-center justify-center w-full p-8 mt-16 space-y-2'>
+    <footer className='absolute bottom-0 flex flex-col items-center justify-end flex-grow w-full space-y-2 bg-no-repeat bg-cover h-72 bg-wave'>
       <div className='flex space-x-8'>
         <a href='https://github.com/babs20' target='_blank' rel='noreferrer'>
           <svg
@@ -34,7 +34,7 @@ export default function Footer(): JSX.Element {
           </svg>
         </a>
       </div>
-      <span className='text-xs font-light text-center'>
+      <span className='pb-8 text-xs font-light text-center text-black'>
         Copyright ©2021 All right reserved
       </span>
     </footer>

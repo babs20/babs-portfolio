@@ -1,3 +1,5 @@
+const { url } = require('inspector');
+
 module.exports = {
   mode: 'jit',
   purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
@@ -62,6 +64,12 @@ module.exports = {
       },
       transitionProperty: {
         height: 'height',
+      },
+      screens: {
+        xs: '420px',
+      },
+      backgroundImage: {
+        wave: "url('./img/wave-2.svg')",
       },
     },
   },
