@@ -1,38 +1,31 @@
-import { Link } from 'react-router-dom';
 export const OpeningArticle = (): JSX.Element => {
   return (
-    <article className='flex items-start justify-center space-x-2'>
-      <div className='flex flex-col w-[500px] space-y-4'>
-        <h1 className='text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-500'>
-          Hello, I am Brady Blair.
-        </h1>
-        <div className='space-y-4 text-lg'>
+    <article className='flex items-start justify-between w-full'>
+      <div className='flex flex-col w-[512px] space-y-4 self-start'>
+        <div>
+          <h1 className='text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-500'>
+            Hello, I Am Brady Blair.
+          </h1>
+          <h2 className='text-3xl text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-500'>
+            A Full Stack Developer With a Focus On Front End Design and
+            Development.
+          </h2>
+        </div>
+        <div className='space-y-4 text-lg font-light'>
           <p>
-            A <b className='font-medium'>Full Stack Web Developer</b> with a
-            focus on{' '}
-            <b className='font-medium'>Front End Design / Frameworks</b>. I am
-            currently located in the Baltimore-Washington Metropolitan Area.
-          </p>
-          <p>
-            Some of the technologies I enjoy and have experience working with
-            are:{' '}
-            <b className='font-medium'>
-              React, TypeScript, Express.js, PostgresSQL, Ruby on Rails, and
-              TailwindCSS.
-            </b>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lectus
+            elementum condimentum at turpis pellentesque adipiscing nulla porta
+            justo. Orci lectus ornare sed turpis ipsum adipiscing vitae hac
+            luctus.
           </p>
         </div>
-        <Link to='/projects' className='mt-4 text-lg italic underline'>
-          Check Out Some of My Recent Projects!
-        </Link>
       </div>
-      <div className='relative'>
+      <div className='relative ml-8'>
         <svg
-          width='396'
-          height='364'
           viewBox='0 0 396 364'
           fill='none'
           xmlns='http://www.w3.org/2000/svg'
+          className='w-[255px] h-[235px] md:w-[396px] md:h-[364px]'
         >
           <path
             fillRule='evenodd'
@@ -44,19 +37,13 @@ export const OpeningArticle = (): JSX.Element => {
             fillRule='evenodd'
             clipRule='evenodd'
             d='M245.066 20.1999C272.32 29.0838 290.027 52.2647 314.156 67.7197C340.495 84.5897 380.539 85.9718 392.692 114.755C404.838 143.522 380.255 173.66 371.545 203.642C362.45 234.95 366.697 274.259 340.643 293.918C314.554 313.603 277.639 296.134 245.066 299.075C207.687 302.45 166.189 334.7 136.041 312.39C105.825 290.03 124.716 240.915 116.863 204.201C110.167 172.898 90.8634 145.376 93.4934 113.476C96.6373 75.3426 100.351 28.746 132.984 8.66428C165.756 -11.5031 208.467 8.27024 245.066 20.1999Z'
-            fill='url(#paint0_linear)'
-          />
-          <path
-            fillRule='evenodd'
-            clipRule='evenodd'
-            d='M245.066 20.1999C272.32 29.0838 290.027 52.2647 314.156 67.7197C340.495 84.5897 380.539 85.9718 392.692 114.755C404.838 143.522 380.255 173.66 371.545 203.642C362.45 234.95 366.697 274.259 340.643 293.918C314.554 313.603 277.639 296.134 245.066 299.075C207.687 302.45 166.189 334.7 136.041 312.39C105.825 290.03 124.716 240.915 116.863 204.201C110.167 172.898 90.8634 145.376 93.4934 113.476C96.6373 75.3426 100.351 28.746 132.984 8.66428C165.756 -11.5031 208.467 8.27024 245.066 20.1999Z'
             fill='#D6D8DB'
           />
         </svg>
         <img
           src='./img/brady-2.png'
-          alt=''
-          className='w-[281px] absolute z-10 top-[40px] left-[57px]'
+          alt='Brady Blair with a black shirt and brown hat.'
+          className='w-[182px] md:w-[281px] absolute z-10 md:top-[40px] md:left-[57px] top-[39px] left-[37px]'
         />
       </div>
     </article>
