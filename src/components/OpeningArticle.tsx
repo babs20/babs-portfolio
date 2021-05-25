@@ -1,7 +1,7 @@
 export const OpeningArticle = (): JSX.Element => {
   return (
     <article className='flex items-start justify-between w-full'>
-      <div className='flex flex-col w-[512px] space-y-4 self-start'>
+      <div className='flex flex-col w-[640px] space-y-4 self-start'>
         <div>
           <h1 className='text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-500'>
             Hello, I Am Brady Blair.
@@ -13,10 +13,10 @@ export const OpeningArticle = (): JSX.Element => {
         </div>
         <div className='space-y-4 text-lg font-light'>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lectus
-            elementum condimentum at turpis pellentesque adipiscing nulla porta
-            justo. Orci lectus ornare sed turpis ipsum adipiscing vitae hac
-            luctus.
+            With a background in live video, design, and audio engineering, I
+            have a passion for using technology to create an immersive and
+            seamless experience for others to enjoy. As a developer, I get to
+            use all of these experiences to create something engaging everytime!
           </p>
         </div>
       </div>
@@ -25,7 +25,7 @@ export const OpeningArticle = (): JSX.Element => {
           viewBox='0 0 396 364'
           fill='none'
           xmlns='http://www.w3.org/2000/svg'
-          className='w-[255px] h-[235px] md:w-[396px] md:h-[364px]'
+          className='w-[255px] h-[235px] md:w-[330px] md:h-[304px]'
         >
           <path
             fillRule='evenodd'
@@ -43,7 +43,7 @@ export const OpeningArticle = (): JSX.Element => {
         <img
           src='./img/brady-2.png'
           alt='Brady Blair with a black shirt and brown hat.'
-          className='w-[182px] md:w-[281px] absolute z-10 md:top-[40px] md:left-[57px] top-[39px] left-[37px]'
+          className='w-[182px] md:w-[234px] absolute z-10 md:top-[30px] md:left-[57px] top-[39px] left-[37px]'
         />
       </div>
     </article>
