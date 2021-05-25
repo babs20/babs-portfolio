@@ -112,7 +112,7 @@ const SVGList = (): JSX.Element => {
 
 export const LogoScroll = (): JSX.Element => {
   return (
-    <div className='relative flex mt-8 overflow-hidden'>
+    <div className='relative flex mt-8 overflow-hidden slider'>
       <div className='flex items-center animate-scroll'>
         <SVGList />
       </div>
