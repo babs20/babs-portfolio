@@ -8,12 +8,12 @@ export default function TopNav(): JSX.Element {
   return (
     <nav
       className={classNames(
-        'flex flex-col items-center w-full sm:h-20 py-4 px-8 text-[#6B7385] transition-height duration-500 mb-8',
+        'flex flex-col items-center w-full sm:h-20 py-4 px-8 md:px-16 xl:px-32 text-[#6B7385] transition-height duration-500 mb-8',
         { 'h-20 ease-in': isOpen !== 'open' },
         { 'h-48 ease-in': isOpen === 'open' }
       )}
     >
-      <div className='flex items-center justify-between w-full sm:justify-around'>
+      <div className='flex items-center justify-between w-full'>
         <Link to='/'>
           <svg
             width='40'
@@ -49,7 +49,7 @@ export default function TopNav(): JSX.Element {
             Contact
           </Link>
         </div>
-        <button className='sm:invisible'>
+        <button className='sm:hidden'>
           <svg
             xmlns='http://www.w3.org/2000/svg'
             className='w-10 h-10'

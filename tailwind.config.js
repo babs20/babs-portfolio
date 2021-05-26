@@ -37,6 +37,7 @@ module.exports = {
       animation: {
         'fall-down': 'fall 400ms forwards',
         'fold-up': 'up 300ms forwards',
+        scroll: 'scroll 40000ms infinite linear',
       },
       keyframes: {
         fall: {
@@ -59,6 +60,14 @@ module.exports = {
             opacity: '0',
             transform: 'translateY(-20%)',
             visibility: 'invisible',
+          },
+        },
+        scroll: {
+          '0%': {
+            transform: 'translateX(0)',
+          },
+          '100%': {
+            transform: 'translateX(-100%)',
           },
         },
       },

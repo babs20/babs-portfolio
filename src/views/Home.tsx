@@ -1,11 +1,11 @@
 import OpeningArticle from '../components/OpeningArticle';
-import Projects from './Projects';
+import TechStack from '../components/TechStack';
 
 export const Home = (): JSX.Element => {
   return (
-    <section className=''>
+    <section>
       <OpeningArticle />
-      <Projects />
+      <TechStack />
     </section>
   );
 };
