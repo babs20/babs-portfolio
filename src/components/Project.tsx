@@ -22,7 +22,7 @@ export const Project = ({
       <img
         src={image}
         alt={`A preview of ${projectName}.`}
-        className='object-cover rounded-xl h-48 sm:h-[175px] w-full sm:w-[175px] mb-4'
+        className='object-cover rounded-xl h-48 sm:h-[175px] w-full sm:w-[175px] mb-4 object-top'
       />
       <div>
         <div className='flex flex-col items-start mb-2 xs:flex-row xs:space-x-4 sm:items-center'>
