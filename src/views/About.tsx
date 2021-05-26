@@ -5,7 +5,7 @@ export default function About(): JSX.Element {
     <section className='min-h-full px-8 py-8'>
       <ArticleWithPhoto photoSide='left'>
         <div className='lg:w-[40rem] mx-auto lg:m-0'>
-          <h1 className='mb-2 text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-500'>
+          <h1 className='w-[min-content] whitespace-nowrap mb-2 text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-500'>
             About Me
           </h1>
           <div className='text-[#6B7385] rounded-3xl leading-6 prose'>

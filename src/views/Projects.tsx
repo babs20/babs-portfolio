@@ -4,11 +4,13 @@ export default function Projects(): JSX.Element {
   return (
     <section className='flex flex-col items-center px-8 sm:px-16'>
       <div>
-        <div>
-          <h1 className='text-4xl font-black text-primary'>Projects</h1>
-          <span className='font-light text-primary'>
-            A sample of some recent work.
-          </span>
+        <div className='w-[min-content] whitespace-nowrap'>
+          <h1 className='text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-500'>
+            Projects
+          </h1>
+          <h2 className='text-2xl font-light text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-500'>
+            A Sample of My Recent Work
+          </h2>
         </div>
         <div className='pb-16 divide-y divide-gray-300'>
           <Project

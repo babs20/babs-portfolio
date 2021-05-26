@@ -162,7 +162,9 @@ export const ContactForm = (): JSX.Element => {
       onSubmit={e => submitForm(e)}
       id='contact-form'
     >
-      <h1 className='w-full text-3xl font-black'>Contact</h1>
+      <h1 className='text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-500'>
+        Contact
+      </h1>
       <div className='flex flex-col w-full'>
         <label
           htmlFor='name'
