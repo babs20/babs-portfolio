@@ -1,13 +1,13 @@
 export const OpeningArticle = (): JSX.Element => {
   return (
-    <article className='flex items-start justify-between w-full'>
-      <div className='flex flex-col w-[640px] space-y-4 self-start'>
+    <article className='flex flex-col items-center justify-between w-full lg:items-start lg:flex-row'>
+      <div className='flex flex-col lg:w-[640px] space-y-4 self-start'>
         <div>
           <h1 className='text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-500'>
             Hello, I Am Brady Blair.
           </h1>
           <h2 className='text-3xl text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-500'>
-            A Full Stack Developer With a Focus On Front End Design and
+            A Full Stack Developer With a Focus On Front-End Design and
             Development.
           </h2>
         </div>
@@ -20,7 +20,7 @@ export const OpeningArticle = (): JSX.Element => {
           </p>
         </div>
       </div>
-      <div className='relative ml-8'>
+      <div className='relative my-8 lg:ml-8'>
         <svg
           viewBox='0 0 396 364'
           fill='none'

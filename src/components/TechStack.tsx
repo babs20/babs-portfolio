@@ -2,7 +2,7 @@ import LogoScroll from './LogoScroll';
 export const TechStack = (): JSX.Element => {
   return (
     <article className=''>
-      <div className='flex flex-col w-[min-content] whitespace-nowrap'>
+      <div className='flex flex-col lg:w-[min-content] lg:whitespace-nowrap'>
         <h1 className='text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-500'>
           Languages, Frameworks, and Other Tech
         </h1>
