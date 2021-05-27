@@ -35,7 +35,7 @@ export default function Footer(): JSX.Element {
         </a>
       </div>
       <span className='pb-8 text-xs font-light text-center text-black'>
-        Copyright ©2021 All right reserved
+        Copyright ©2021 All rights reserved
       </span>
     </footer>
   );
