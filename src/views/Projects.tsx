@@ -3,7 +3,7 @@ import Project from '../components/Project';
 export default function Projects(): JSX.Element {
   return (
     <section className='flex flex-col items-center px-8 sm:px-16'>
-      <div>
+      <div className='flex flex-col'>
         <div className='w-[min-content] whitespace-nowrap'>
           <h1 className='text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-500'>
             Projects
@@ -161,6 +161,17 @@ export default function Projects(): JSX.Element {
             </svg>
           </Project>
         </div>
+        <span className='self-center'>
+          Check out more of my work on{' '}
+          <a
+            href='https://github.com/babs20'
+            target='_blank'
+            rel='noreferrer'
+            className='underline hover:text-gray-800'
+          >
+            GitHub!
+          </a>
+        </span>
       </div>
     </section>
   );
