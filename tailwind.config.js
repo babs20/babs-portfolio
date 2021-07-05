@@ -25,10 +25,14 @@ module.exports = {
       white: "#ffffff",
       black: "#000000",
       darkGray: "#424242",
-      medGray: "4D4D4D",
+      medGray: "#4D4D4D",
       lightGray: "#E6E6E6",
     },
-    extend: {},
+    extend: {
+      fontSize: {
+        heading: "2.5rem",
+      },
+    },
   },
   variants: {
     extend: {},
