@@ -5,7 +5,11 @@ export const Footer = (): JSX.Element => {
         Copyright ©2021 All rights reserved
       </span>
       <div className="flex space-x-4">
-        <a href="https://github.com/babs20" rel="noreferrer noopener">
+        <a
+          href="https://github.com/babs20"
+          rel="noreferrer noopener"
+          target="_blank"
+        >
           <svg
             viewBox="0 0 128 128"
             className="w-6 h-6 dark:text-white"
@@ -25,6 +29,7 @@ export const Footer = (): JSX.Element => {
         <a
           href="https://www.linkedin.com/in/bradyblair20/"
           rel="noreferrer noopener"
+          target="_blank"
         >
           <svg
             viewBox="0 0 128 128"
