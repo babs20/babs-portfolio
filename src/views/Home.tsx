@@ -21,8 +21,8 @@ const database: string[] = ["PostgreSQL"];
 
 export const Home = (): JSX.Element => {
   return (
-    <main className="py-20 xl:flex xl:space-x-20">
-      <div className="xl:space-y-20">
+    <main className="py-20 xl:flex xl:space-x-20 xl:justify-between">
+      <div className="xl:space-y-20 xl:w-[1024px]">
         <AboutMe />
         <Section svg={<ComputerSVG />} title="TECH STACK">
           <ul className="grid grid-cols-2 mt-3 gap-y-6 sm:flex sm:justify-between">
