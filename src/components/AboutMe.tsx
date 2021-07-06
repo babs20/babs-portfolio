@@ -1,7 +1,7 @@
 export const AboutMe = (): JSX.Element => {
   return (
-    <section className="flex flex-col items-center">
-      <article>
+    <section className="flex flex-col items-center sm:flex-row sm:justify-between xl:space-x-6">
+      <article className="sm:w-[275px] lg:w-[384px] xl:w-full">
         <h1 className="font-bold text-heading">BRADY BLAIR</h1>
         <p className="dark:text-lightGray text-medGray">
           Hello! I am <strong>full stack developer</strong> with a passion for

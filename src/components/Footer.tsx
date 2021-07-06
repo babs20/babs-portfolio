@@ -1,7 +1,7 @@
 export const Footer = (): JSX.Element => {
   return (
-    <footer className="flex items-center justify-between text-sm">
-      <span className="text-medGray dark:text-lightGray">
+    <footer className="flex items-center justify-between w-full text-sm sm:justify-start sm:space-x-4">
+      <span className="text-medGray dark:text-lightGray whitespace-nowrap">
         Copyright ©2021 All rights reserved
       </span>
       <div className="flex space-x-4">
@@ -41,6 +41,7 @@ export const Footer = (): JSX.Element => {
           </svg>
         </a>
       </div>
+      <div className="hidden md:block h-[1px] w-full bg-black dark:bg-white" />
     </footer>
   );
 };

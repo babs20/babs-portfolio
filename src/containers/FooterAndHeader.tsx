@@ -9,8 +9,10 @@ type Props = {
 export const FooterAndHeader = ({ children }: Props): JSX.Element => {
   return (
     <>
-      <Header />
-      {children}
+      <div>
+        <Header />
+        {children}
+      </div>
       <Footer />
     </>
   );

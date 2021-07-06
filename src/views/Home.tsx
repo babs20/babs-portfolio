@@ -21,25 +21,23 @@ const database: string[] = ["PostgreSQL"];
 
 export const Home = (): JSX.Element => {
   return (
-    <main className="py-20">
-      <AboutMe />
-      <Section svg={<ComputerSVG />} title="TECH STACK">
-        <ul className="mt-3 space-y-6">
-          <div className="flex justify-between">
+    <main className="py-20 xl:flex xl:space-x-20">
+      <div className="xl:space-y-20">
+        <AboutMe />
+        <Section svg={<ComputerSVG />} title="TECH STACK">
+          <ul className="grid grid-cols-2 mt-3 gap-y-6 sm:flex sm:justify-between">
             <TechStackList stackName="Front End" technologies={frontEnd} />
             <TechStackList stackName="Back End " technologies={backEnd} />
-          </div>
-          <div className="flex justify-between">
             <TechStackList stackName="Languages" technologies={languages} />
             <TechStackList stackName="Database" technologies={database} />
-          </div>
-        </ul>
-        <span className="block mt-6 text-sm italic text-center text-medGray dark:text-lightGray">
-          Always Learning and Exploring More...
-        </span>
-      </Section>
+          </ul>
+          <span className="block mt-6 text-sm italic text-center text-medGray dark:text-lightGray sm:inline-block">
+            Always Learning and Exploring More...
+          </span>
+        </Section>
+      </div>
       <Section svg={<FolderSVG />} title="PROJECTS">
-        <div className="mt-3 space-y-6">
+        <div className="mt-3 space-y-6 lg:grid-cols-2 lg:grid lg:gap-6 lg:space-y-0 xl:block xl:space-y-6">
           <Project
             projectName={"Journey"}
             projectType={"Team Project"}
@@ -58,6 +56,7 @@ export const Home = (): JSX.Element => {
               "Scheduler is a SPA (Single-Page Application) used to schedule up-to-date, and organized appointments for organizations. Using real-time updating via a Websocket connection you are able to see what your colleagues are doing in real-time!"
             }
             repo={"scheduler"}
+            site={"https://scheduler-babs.netlify.app/"}
           ></Project>
           <Project
             projectName={"The Planets"}
@@ -67,6 +66,7 @@ export const Home = (): JSX.Element => {
               "An 8-page fact site for all the planets in our solar system. My goal with this project was to learn Next.js while also expanding upon my layout knowledge, mobile-first workflow, and HTML accessibility. Explore the responsive designs on all device sizes."
             }
             repo={"planets-fact-site"}
+            site={"https://theplanets-babs.netlify.app/"}
           ></Project>
           <Project
             projectName={"Blogr"}
@@ -76,6 +76,7 @@ export const Home = (): JSX.Element => {
               "Using a design in Figma provided by Frontend Mentor, I recreated the design of blog publishing platform's landing page. I used React, TypeScript, and Styled Components."
             }
             repo={"blogr"}
+            site={"https://blogr-babs.netlify.app/"}
           ></Project>
           <Project
             projectName={"Jungle"}
