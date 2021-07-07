@@ -22,7 +22,7 @@ export const AboutMe = (): JSX.Element => {
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
           stroke="currentColor"
-          className="text-black dark:text-white"
+          className="text-black dark:text-white hover:text-medGray"
           aria-hidden="true"
           focusable="false"
         >

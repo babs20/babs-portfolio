@@ -2,34 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
-.indent {
-  text-indent: 1rem;
+@media (prefers-color-scheme: dark) {
+  ::selection {
+    background-color: #ffedca;
+    color: #4d4d4d;
+  }
 }
 
-.mask-image {
-  clip-path: url(#clip);
-  object-fit: cover;
-}
-
-.animation-delay {
-  animation-delay: calc(var(--order) * 100ms);
-}
-
-.slider::before,
-.slider::after {
-  height: 64px;
-  width: 64px;
-  position: absolute;
-  content: '';
-  background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%);
-  z-index: 1;
-}
-.slider::before {
-  left: 0;
-  top: 0;
-}
-.slider::after {
-  right: 0;
-  top: 0;
-  transform: rotateZ(180deg);
+@media (prefers-color-scheme: light) {
+  ::selection {
+    background-color: #ffedca;
+  }
 }
