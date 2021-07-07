@@ -26,7 +26,7 @@ export const Project = ({
         >
           <svg
             viewBox="0 0 128 128"
-            className="w-6 h-6 dark:text-white"
+            className="w-6 h-6 transition-colors duration-150 dark:text-white dark:hover:text-hoverGray hover:text-medGray"
             fill="currentColor"
           >
             <title>GitHub Profile</title>
@@ -48,7 +48,7 @@ export const Project = ({
               viewBox="0 0 24 24"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
-              className="w-6 h-6 dark:text-white"
+              className="w-6 h-6 dark:text-white dark:hover:text-hoverGray hover:text-medGray"
               stroke="currentColor"
             >
               <g clip-path="url(#clip0)">

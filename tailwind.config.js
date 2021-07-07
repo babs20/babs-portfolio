@@ -27,6 +27,7 @@ module.exports = {
       darkGray: "#424242",
       medGray: "#4D4D4D",
       lightGray: "#EBEBEB",
+      hoverGray: "#D9D9D9",
     },
     extend: {
       fontSize: {
