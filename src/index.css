@@ -3,14 +3,14 @@
 @tailwind utilities;
 
 @media (prefers-color-scheme: dark) {
-  ::selection {
-    background-color: #ffedca;
-    color: #4d4d4d;
-  }
+	::selection {
+		background-color: theme('colors.highlightOrange');
+		color: theme('colors.darkGray');
+	}
 }
 
 @media (prefers-color-scheme: light) {
-  ::selection {
-    background-color: #ffedca;
-  }
+	::selection {
+		background-color: theme('colors.highlightOrange');
+	}
 }

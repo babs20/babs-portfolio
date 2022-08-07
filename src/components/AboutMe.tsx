@@ -1,37 +1,40 @@
 export const AboutMe = (): JSX.Element => {
-  return (
-    <section className="flex flex-col items-center sm:flex-row sm:justify-between xl:space-x-6">
-      <article className="sm:w-[275px] lg:w-[384px] ">
-        <h1 className="font-bold text-heading">BRADY BLAIR</h1>
-        <p className="dark:text-lightGray text-medGray">
-          Hello! I am <strong>full stack developer</strong> with a passion for
-          front end design. I love <strong>creatively</strong> solving problems
-          and creating <strong>enjoyable</strong> user experiences!
-        </p>
-      </article>
-      <div className="relative mt-6">
-        <img
-          src="/img/brady.png"
-          alt="Brady Blair"
-          className="absolute left-[38px] w-[156px] h-[156px]"
-        />
-        <svg
-          width="237"
-          height="156"
-          viewBox="0 0 237 156"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          stroke="currentColor"
-          className="text-black dark:text-white"
-          aria-hidden="true"
-          focusable="false"
-        >
-          <circle cx="78.5" cy="78" r="77.5" />
-          <circle cx="158.5" cy="78" r="77.5" />
-        </svg>
-      </div>
-    </section>
-  );
+	return (
+		<section className="flex flex-col items-center sm:flex-row sm:justify-between xl:space-x-6">
+			<article className="sm:w-[275px] lg:w-[384px] ">
+				<h1 className="font-bold text-heading">BRADY BLAIR</h1>
+				<p className="dark:text-lightGray text-medGray">
+					Hello! I am a <strong>frontend developer</strong> passionate
+					about producing <strong>efficient</strong>,{' '}
+					<strong>accessible</strong>, and <strong>rewarding</strong>{' '}
+					user interfaces. I love <strong>creatively</strong> solving
+					problems and creating <strong>enjoyable</strong> user
+					experiences!
+				</p>
+			</article>
+			<div className="relative mt-6">
+				<img
+					src="/img/brady-2@2x.png"
+					srcSet="/img/brady-2.png, /img/brady-2@2x.png 2x"
+					alt="Brady Blair"
+					className="absolute left-[38px] w-[156px] h-[156px] rounded-full"
+				/>
+				<svg
+					width="237"
+					height="156"
+					viewBox="0 0 237 156"
+					fill="none"
+					xmlns="http://www.w3.org/2000/svg"
+					stroke="currentColor"
+					className="text-black dark:text-white"
+					aria-hidden="true"
+					focusable="false">
+					<circle cx="78.5" cy="78" r="77.5" />
+					<circle cx="158.5" cy="78" r="77.5" />
+				</svg>
+			</div>
+		</section>
+	);
 };
 
 export default AboutMe;
